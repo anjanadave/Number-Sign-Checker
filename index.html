@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Sign Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Number Sign Checker</h1>
+        <label for="numberInput" class="lable">Enter a Number: </label>    
+        <input type="number" id="numberInput" class="one">
+        <br>
+        <button  onclick="checkNumberSign()">Sign Checker</button>
+        <p id="result"></p>
+    </div>
+    <script>
+    function checkNumberSign(){
+        let number = parseFloat(document.getElementById("numberInput").value);
+
+        let result = "The number " + number + " is ";
+
+        if(number > 0) {
+            result += " Positive.";
+        }else if (number < 0) {
+            result += " Negative.";
+        }else{
+            result += "zero.";
+        }
+
+        document.getElementById("result").innerHTML = result;
+    }
+    </script>
+</body>
+</html>
